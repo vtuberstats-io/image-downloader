@@ -1,0 +1,23 @@
+{
+  "name": "image-downloader",
+  "version": "0.0.1",
+  "description": "a component of vtuberstats.io",
+  "author": "darkyzhou",
+  "private": true,
+  "license": "Apache-2.0",
+  "scripts": {
+    "dev": "devspace dev",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "crypto-random-string": "^3.3.0",
+    "exit-hook-plus": "^0.2.0",
+    "kafkajs": "^1.15.0",
+    "mongodb": "^3.6.3"
+  },
+  "devDependencies": {
+    "@types/mongodb": "^3.6.3",
+    "prettier": "^2.2.1"
+  }
+}
