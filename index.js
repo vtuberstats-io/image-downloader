@@ -5,8 +5,15 @@ const DATA_ROOT_PATH = process.env.DATA_ROOT_PATH;
 const __externalUrl = process.env.EXTERNAL_URL;
 const HOSTNAME = process.env.HOSTNAME; // offered by kubernetes automatically
 
-if (!KAFKA_BROKERS || !MONGODB_URL || !DATA_ROOT_PATH || !__externalUrl || !HOSTNAME) {
-  console.error(`missing environment variables, env: ${JSON.stringify(process.env)}`);
+if (
+  !KAFKA_BROKERS ||
+  !MONGODB_URL ||
+  !IMAGE_CACHE_TIME_MS ||
+  !DATA_ROOT_PATH ||
+  !__externalUrl ||
+  !HOSTNAME
+) {
+  console.error(`missing or invalid environment variables, env: ${JSON.stringify(process.env)}`);
   process.exit(1);
 }
 
